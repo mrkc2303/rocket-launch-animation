@@ -8,13 +8,14 @@ function countdown() {
 	timeLeft--;
 	document.getElementById("seconds").innerHTML = String( timeLeft );
 	if (timeLeft > 0) {
-		setTimeout(countdown, 1000);	
+		setTimeout(countdown, 1000);
 		if(timeLeft == 2) {
 			document.querySelector(".circleOverlay").classList.add("semiCircleAnimate");
 			document.querySelector(".timerH4").classList.add("timerAnimate");
 		}
 	} else {
 		document.getElementById("clock").style.display="none";
+		document.querySelector(".smokenFire").style.display="block";
 		document.querySelector(".rocketImg").classList.add("rocketImgAnimate");
 		document.querySelector(".backImg").classList.add("backImgAnimate");
 		document.querySelector("body").classList.add("backgroundAnimate");
@@ -46,10 +47,13 @@ function displayTimer(){
         }
     }
 
- let h = hours < 10 ? "0" + hours : hours;
  let m = minutes < 10 ? "0" + minutes : minutes;
  let s = seconds < 10 ? "0" + seconds : seconds;
  let ms = milliseconds < 10 ? "00" + milliseconds : milliseconds < 100 ? "0" + milliseconds : milliseconds;
+
+ if(s == 5) {
+	document.querySelector(".backImg").style.display="none";
+ }
 
  timerRef.innerHTML = `T+ ${m} : ${s} : ${ms}`;
 }

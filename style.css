@@ -413,6 +413,38 @@
   bottom: 0;
   z-index: 11;
   bottom: -40px;
+  font-family: Arial, sans-serif;
+}
+
+.smokenFire {
+  position: fixed;
+  z-index: 0;
+  margin-top: -18px;
+  margin-left: 19px;
+  display: none;
+}
+
+.smokenFire img {
+ animation: changeImg 0.5s linear infinite;
+}
+
+
+@keyframes changeImg {
+  0% {
+    content: url("./smoke1.png");
+  }
+  25% {
+    content: url("./smoke2.png");
+  }
+  50% {
+    content: url("./smoke3.png");
+  }
+  75% {
+    content: url("./smoke4.png");
+  }
+  100% {
+    content: url("./smoke5.png");
+  }
 }
 
 @keyframes moveBackground {
