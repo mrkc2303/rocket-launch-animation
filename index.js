@@ -58,9 +58,5 @@ function displayTimer(){
 	document.querySelector(".backImg").style.display="none";
  }
 
- if(s <= 13 && (ms % 300 == 0)) {
-	//document.querySelector(".verticalClouds").append("<div class='y1'><div class='cloud'></div></div>");
- }
-
  timerRef.innerHTML = `T+ ${m} : ${s} : ${ms}`;
 }
