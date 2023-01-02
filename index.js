@@ -26,6 +26,9 @@ function countdown() {
 		document.querySelector(".x4").style.display="none";
 		document.querySelector(".x5").style.display="none";
 
+		document.querySelector(".y1").style.display="block";
+		document.querySelector(".y1").classList.add("cloudAnimation");
+
 		int = setInterval(displayTimer,10);
 	}
 };
@@ -53,6 +56,10 @@ function displayTimer(){
 
  if(s == 5) {
 	document.querySelector(".backImg").style.display="none";
+ }
+
+ if(s <= 13 && (ms % 300 == 0)) {
+	//document.querySelector(".verticalClouds").append("<div class='y1'><div class='cloud'></div></div>");
  }
 
  timerRef.innerHTML = `T+ ${m} : ${s} : ${ms}`;
